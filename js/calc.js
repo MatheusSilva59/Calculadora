@@ -56,7 +56,7 @@ function deleteLastValue(){
 }
 
 function deleteInstanceValue(){
-    document.getElementById('numDisplay').value = ''
+    document.getElementById('numDisplay').value = 0
 }
 
 function saveNumber(operation){
@@ -99,10 +99,7 @@ function saveNumber(operation){
         end = false
     }
     lastOperation = operation
-    result = 0
-    // if (elementHistory().length < 3){
-        
-    // }         
+    result = 0     
 }
 
 function plus(a, b){
