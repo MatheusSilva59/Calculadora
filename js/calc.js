@@ -128,7 +128,6 @@ function equal(endLocal){
     
     var a = Number(element())
     result = a
-    console.log('AAAAAAAA')
     if(arrayNumbers === false && end === false){
         switch (lastOperation){
         case plus:
