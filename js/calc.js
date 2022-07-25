@@ -29,18 +29,40 @@ function insertValue(value){
 
     hasDecimalPlace = element('string').match(',') == ',' ? true : false
 
-    if (hasDecimalPlace === true && value == decimalPlace){return null}
+    if (hasDecimalPlace === true && value == decimalPlace && arrayNumbers === false){
+        return null
+    }
 
     if(arrayNumbers === true){
-        document.getElementById('numDisplay').value = value
+
+        if(value != decimalPlace){
+            document.getElementById('numDisplay').value = value
+        }
+        else{
+            document.getElementById('numDisplay').value = '0' + value
+        }
+
         arrayNumbers = false
     }
     else{
         if (element() == 0 && value != decimalPlace && element().length < 2){
+
             document.getElementById('numDisplay').value = value
+
         }
         else{
-            document.getElementById('numDisplay').value += value
+            if (value != decimalPlace){
+                document.getElementById('numDisplay').value += value
+            }
+            else{
+                if(element().length == 0){
+                    document.getElementById('numDisplay').value += '0' + value
+                }
+                else{
+                    document.getElementById('numDisplay').value += value
+                }
+                
+            }
         }
     }
 
