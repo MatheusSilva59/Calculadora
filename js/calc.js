@@ -98,7 +98,7 @@ function saveNumber(operation){
     if (operation == 'changeSign'){
         var tempNumber = changeSign(element())
         if (end === true){lastNumber = tempNumber}
-        return document.getElementById('numDisplay').value = tempNumber
+        return document.getElementById('numDisplay').value = tempNumber.toString().replace('.', ',')
     }
 
     var sign = whichOperation(operation)
